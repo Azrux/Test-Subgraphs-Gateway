@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/gateway",
+  "projects": {
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    },
+    "film": {
+      "type": "application",
+      "root": "apps/film",
+      "entryFile": "main",
+      "sourceRoot": "apps/film/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/film/tsconfig.app.json"
+      }
+    },
+    "nesflis": {
+      "type": "application",
+      "root": "apps/nesflis",
+      "entryFile": "main",
+      "sourceRoot": "apps/nesflis/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nesflis/tsconfig.app.json"
+      }
+    },
+    "static-dataset": {
+      "type": "application",
+      "root": "apps/static-dataset",
+      "entryFile": "main",
+      "sourceRoot": "apps/static-dataset/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/static-dataset/tsconfig.app.json"
+      }
+    }
+  }
+}
