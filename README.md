@@ -20,3 +20,7 @@ $ npm run start:dev film
 $ npm run start:dev
 
 ```
+
+### Next steps
+* Go to: http://localhost:3000/graphql
+* Test queries
