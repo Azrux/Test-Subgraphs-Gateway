@@ -6,7 +6,6 @@ import {
   ApolloFederationDriverConfig,
   ApolloFederationDriver,
 } from '@nestjs/apollo';
-import { LanguageResolver } from './language.resolver';
 
 @Module({
   imports: [
@@ -17,6 +16,6 @@ import { LanguageResolver } from './language.resolver';
       },
     }),
   ],
-  providers: [UserResolver, UserService, LanguageResolver],
+  providers: [UserResolver, UserService],
 })
 export class UserModule {}

@@ -1,4 +1,4 @@
-import { Resolver, Query, Args, ResolveReference } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 import { NesflisFilmService } from './nesflis-film.service';
 import { NesflisFilm } from '../entities/nesflis-film.entity';
 
@@ -16,8 +16,8 @@ export class NesflisFilmResolver {
     return this.nesflisFilmService.findOne(id);
   }
 
-  @ResolveReference()
-  resolveReference(reference: { __typename: string; id: string }): NesflisFilm {
-    return this.nesflisFilmService.findOne(reference.id);
-  }
+  // @ResolveReference()
+  // resolveReference(reference: { __typename: string; id: string }): NesflisFilm {
+  //   return this.nesflisFilmService.findOne(reference.id);
+  // }
 }

@@ -9,6 +9,7 @@ export class UserService {
       defaultNesflisFilmLanguage: {
         id: '1',
       },
+      viewHistory: null,
       subscription: {
         isSuscribed: false,
       },

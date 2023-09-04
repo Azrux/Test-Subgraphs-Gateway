@@ -1,4 +1,4 @@
-import { Resolver, Query, Args } from '@nestjs/graphql';
+import { Resolver, Query, Args, ResolveReference } from '@nestjs/graphql';
 import { FilmGenre } from '../entities/film-genre.entity';
 import { FilmGenreService } from './film-genre.service';
 
@@ -14,5 +14,11 @@ export class FilmGenreResolver {
   @Query(() => FilmGenre, { name: 'filmGenre' })
   findOne(@Args('id') id: string) {
     return this.filmGenreService.findOne(id);
+  }
+
+  @ResolveReference()
+  resolveReference(reference: { __typename: string; id: string }) {
+    console.log('resolveReference', reference);
+    return this.filmGenreService.findOne(reference.id);
   }
 }

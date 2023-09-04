@@ -1,10 +1,10 @@
 import { ObjectType, Field } from '@nestjs/graphql';
-import { NesflisFilm } from './nesflis-film.entity';
+import { Film } from './film.entity';
 
 @ObjectType()
 export class UserNesflisFilmEdge {
-  @Field(() => NesflisFilm)
-  node!: NesflisFilm;
+  @Field(() => Film, { nullable: false })
+  node!: Film;
 
   @Field(() => [String])
   viewDate!: string[];
